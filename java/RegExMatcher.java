@@ -53,9 +53,8 @@ public class RegExMatcher {
         } else if (patternChar == '*') {
             boolean match1 = patternMatchHelper(text, textIndex, pattern, patIndex + 1);
             boolean match2 = patternMatchHelper(text, textIndex + 1, pattern, patIndex);
-            boolean match3 = patternMatchHelper(text, textIndex + 1, pattern, patIndex + 1);
 
-            return match1 || match2 || match3;
+            return match1 || match2;
 
         } else if (textChar == patternChar){
             return patternMatchHelper(text, textIndex + 1, pattern, patIndex + 1);
